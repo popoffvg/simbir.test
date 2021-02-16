@@ -6,18 +6,25 @@
 
 Статистика разбора сохраняется в БД H2.
 
+Пример вывода:
+
+``` sh
+font_loaded:2
+25px:2
+```
+
 ## Запуск
 
 Для запуска необходимо (с in-memory H2):
 
 - перейти в директорию проекта `SimbirSoft Internship backend`
 - выполнить в консоли `mvn package appassembler:assemble`
-- выполнить `./target/appassembler/bin/simbir.bat https://www.simbirsoft.com`
+- выполнить `"./target/appassembler/bin/simbir.bat" https://www.simbirsoft.com`
 
 Для запуска в файловой базы данных задайте параметры запуска. Например:
 
 ``` sh
-./target/appassembler/bin/simbir.bat https://www.simbirsoft.com --database-connection="jdbc:h2:tcp://localhost/~/test"
+"./target/appassembler/bin/simbir.bat" https://www.simbirsoft.com --database-connection="jdbc:h2:tcp://localhost/~/test"
 ```
 
 Для запуска в файловой базе необходима установленная БД H2.
